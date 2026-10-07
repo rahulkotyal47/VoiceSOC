@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoiceSOC</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="banner">Scan only machines you own.</div>
+
+  <main>
+    <h1>VoiceSOC</h1>
+    <p class="sub">Tell the analyst what to check.</p>
+
+    <div class="command-row">
+      <input id="command" type="text" autofocus
+             placeholder="Try: scan localhost and tell me the riskiest port">
+      <button id="run" type="button">Run</button>
+    </div>
+
+    <p id="status" class="status" role="status"></p>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

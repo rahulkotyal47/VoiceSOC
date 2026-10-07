@@ -1,0 +1,62 @@
+/* Basic dashboard styling. Phase 6 will extend this. */
+:root {
+  --bg: #f6f7f9;
+  --ink: #1b2430;
+  --muted: #5d6b7c;
+  --accent: #0b6e69;
+  --warn: #fff3cd;
+  --warn-ink: #6b4e00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.banner {
+  background: var(--warn);
+  color: var(--warn-ink);
+  text-align: center;
+  padding: 10px 16px;
+  font-weight: 600;
+}
+
+main {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+h1 { margin: 0 0 4px; font-size: 2rem; }
+.sub { margin: 0 0 24px; color: var(--muted); }
+
+.command-row { display: flex; gap: 10px; }
+
+#command {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  border: 2px solid #c9d1da;
+  border-radius: 8px;
+}
+
+#command:focus { outline: none; border-color: var(--accent); }
+
+#run {
+  padding: 0 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#run:focus-visible { outline: 3px solid #7fd1cb; outline-offset: 2px; }
+
+.status { margin-top: 16px; color: var(--muted); min-height: 1.5em; }
